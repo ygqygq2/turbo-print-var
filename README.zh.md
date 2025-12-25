@@ -1,5 +1,9 @@
 # Turbo Print Log
 
+<p align="center">
+  <img src="resources/images/logo.png" alt="Turbo Print Log" width="200">
+</p>
+
 [![Visual Studio Marketplace Version](https://img.shields.io/visual-studio-marketplace/v/ygqygq2.turbo-print-log.svg?color=07c160&label=turbo-print-log&logo=visual-studio-code)](https://marketplace.visualstudio.com/items?itemName=ygqygq2.turbo-print-log)
 [![Visual Studio Marketplace Installs](https://img.shields.io/visual-studio-marketplace/i/ygqygq2.turbo-print-log)](https://marketplace.visualstudio.com/items?itemName=ygqygq2.turbo-print-log)
 [![Open VSX Downloads](https://img.shields.io/open-vsx/dt/ygqygq2/turbo-print-log?label=open-vsx%20downloads)](https://open-vsx.org/extension/ygqygq2/turbo-print-log)
