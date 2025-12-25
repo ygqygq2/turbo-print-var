@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "module": "ESNext",
+    "target": "ESNext",
+    "outDir": "out",
+    "lib": ["ESNext"],
+    "sourceMap": true,
+    "rootDir": "src",
+    "baseUrl": "./",
+    "strict": true,
+    "esModuleInterop": true,
+    "moduleResolution": "Node",
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "paths": {
+      "@/*": ["src/*"],
+    },
+  },
+  "include": ["./src"],
+  "exclude": ["node_modules", ".vscode-test"],
+}

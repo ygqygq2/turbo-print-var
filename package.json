@@ -1,0 +1,225 @@
+{
+  "name": "turbo-print-log",
+  "displayName": "Turbo Print Log - Multi-Language Debug Helper",
+  "description": "智能多语言调试日志插入工具 - 支持22+编程语言的变量打印",
+  "version": "4.0.0",
+  "publisher": "ygqygq2",
+  "engines": {
+    "vscode": "^1.88.0"
+  },
+  "icon": "resources/images/logo.png",
+  "categories": [
+    "Debuggers",
+    "Testing",
+    "Other"
+  ],
+  "keywords": [
+    "debuggers",
+    "testing"
+  ],
+  "activationEvents": [
+    "onLanguage"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "configuration": {
+      "type": "object",
+      "title": "Turbo Print Log Configuration",
+      "properties": {
+        "turbo-print-log.wrapLogMessage": {
+          "type": "boolean",
+          "default": false,
+          "description": "Determine if the log message should be wrapped or not."
+        },
+        "turbo-print-log.prefix": {
+          "type": "string",
+          "default": "🚀",
+          "description": "Log message prefix symbol."
+        },
+        "turbo-print-log.suffix": {
+          "type": "string",
+          "default": ":",
+          "description": "Variable name suffix."
+        },
+        "turbo-print-log.includeFileInfo": {
+          "type": "boolean",
+          "default": true,
+          "description": "Include file name and line number."
+        },
+        "turbo-print-log.addSemicolon": {
+          "type": "boolean",
+          "description": "Add semicolon at the end. If not set, uses language default."
+        },
+        "turbo-print-log.emptyLineBefore": {
+          "type": "boolean",
+          "default": false,
+          "description": "Insert empty line before log."
+        },
+        "turbo-print-log.emptyLineAfter": {
+          "type": "boolean",
+          "default": false,
+          "description": "Insert empty line after log."
+        },
+        "turbo-print-log.separator": {
+          "type": "string",
+          "default": "~",
+          "description": "Separator between log elements."
+        },
+        "turbo-print-log.quote": {
+          "type": "string",
+          "enum": [
+            "\"",
+            "'",
+            "`"
+          ],
+          "default": "\"",
+          "description": "Quote style: double, single or backtick."
+        },
+        "turbo-print-log.logFunction": {
+          "type": "object",
+          "default": {
+            "php": "echo"
+          },
+          "description": "Custom log function per language."
+        }
+      }
+    },
+    "commands": [
+      {
+        "command": "turbo-print-log.insertLog",
+        "title": "Turbo Print Log: Insert Log"
+      },
+      {
+        "command": "turbo-print-log.updateLineNumbers",
+        "title": "Turbo Print Log: Update Line Numbers"
+      },
+      {
+        "command": "turbo-print-log.commentLogs",
+        "title": "Turbo Print Log: Comment Logs"
+      },
+      {
+        "command": "turbo-print-log.uncommentLogs",
+        "title": "Turbo Print Log: Uncomment Logs"
+      },
+      {
+        "command": "turbo-print-log.deleteLogs",
+        "title": "Turbo Print Log: Delete Logs"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "turbo-print-log.insertLog",
+        "key": "ctrl+alt+l",
+        "mac": "ctrl+alt+l",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "turbo-print-log.updateLineNumbers",
+        "key": "ctrl+alt+u",
+        "mac": "ctrl+alt+u",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "turbo-print-log.commentLogs",
+        "key": "alt+shift+c",
+        "mac": "alt+shift+c",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "turbo-print-log.uncommentLogs",
+        "key": "alt+shift+u",
+        "mac": "alt+shift+u",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "turbo-print-log.deleteLogs",
+        "key": "alt+shift+d",
+        "mac": "alt+shift+d",
+        "when": "editorTextFocus"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run clean && npm run esbuild-base -- --minify",
+    "esbuild-base": "esbuild ./src/extension.ts --bundle --outfile=out/extension.js --external:vscode --format=cjs --platform=node",
+    "esbuild": "npm run esbuild-base -- --sourcemap",
+    "esbuild-watch": "npm run esbuild-base -- --sourcemap --watch",
+    "watch": "npm run esbuild --watch",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src ",
+    "lint-fix": "eslint --fix src",
+    "compile": "npm run esbuild-base -- --sourcemap",
+    "package": "vsce package --no-dependencies",
+    "publish": "vsce publish --no-dependencies",
+    "clean": "rimraf out/",
+    "test-compile": "npm run clean && tsc -p tsconfig.mocha.json && npm run compile",
+    "test": "cross-env TS_NODE_PROJECT=tsconfig.mocha.json vscode-test",
+    "test-grep": "cross-env TS_NODE_PROJECT=tsconfig.mocha.json vscode-test -f",
+    "test:suite:mocha": "cross-env TS_NODE_PROJECT=tsconfig.mocha.json npm run test-compile && node out/test/runTests.js",
+    "test:suite": "vitest suite --watch=false",
+    "test:unit": "vitest unit --watch=false",
+    "test:coverage": "vitest run --coverage",
+    "prepush": "pnpm run lint",
+    "postinstall": "simple-git-hooks",
+    "preinstall": "npx only-allow pnpm"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.1.1",
+    "@types/chai": "^4.3.14",
+    "@types/fs-extra": "^11.0.4",
+    "@types/glob": "^8.1.0",
+    "@types/lodash": "^4.17.0",
+    "@types/mocha": "^10.0.6",
+    "@types/node": "^20.12.7",
+    "@types/sinon": "^17.0.3",
+    "@types/tmp": "^0.2.6",
+    "@types/vscode": "^1.88.0",
+    "@typescript-eslint/eslint-plugin": "^7.7.1",
+    "@typescript-eslint/parser": "^7.7.1",
+    "@vitest/coverage-v8": "^1.5.2",
+    "@vscode/test-cli": "^0.0.9",
+    "@vscode/test-electron": "^2.3.9",
+    "cross-env": "^7.0.3",
+    "esbuild": "^0.25.4",
+    "eslint": "^9.1.1",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.1.3",
+    "eslint-plugin-simple-import-sort": "^12.1.0",
+    "expect-type": "^0.19.0",
+    "fs-extra": "^11.2.0",
+    "glob": "^10.3.12",
+    "jest-mock-vscode": "^3.0.2",
+    "lint-staged": "^15.2.2",
+    "lodash": "^4.17.21",
+    "mocha": "^10.4.0",
+    "prettier": "^3.2.5",
+    "rimraf": "^5.0.5",
+    "simple-git-hooks": "^2.11.1",
+    "sinon": "^17.0.1",
+    "tmp": "^0.2.4",
+    "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.4.5",
+    "typescript-eslint": "^7.7.1",
+    "vite": "^5.4.21",
+    "vitest": "^1.6.1"
+  },
+  "license": "SEE LICENSE IN LICENSE.txt",
+  "bugs": {
+    "url": "https://github.com/ygqygq2/turbo-print-log/issues",
+    "email": "ygqygq2@qq.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:ygqygq2/turbo-print-log.git"
+  },
+  "__metadata": {
+    "id": "ygqygq2.turbo-print-log",
+    "publisherDisplayName": "ygqygq2",
+    "publisherId": "e0b1421e-635c-639a-85a0-8b271dcb3d11",
+    "isPreReleaseVersion": false
+  },
+  "dependencies": {
+    "@ygqygq2/vscode-log": "^0.0.3"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "TPL-1001": "Configuration is missing",
+  "TPL-1002": "Invalid configuration format",
+  "TPL-1003": "Missing required configuration field",
+  "TPL-1004": "Configuration value out of range",
+  "TPL-2001": "No active editor found",
+  "TPL-2002": "No selection in editor",
+  "TPL-2003": "Failed to insert log statement",
+  "TPL-2004": "Failed to delete log statement",
+  "TPL-2005": "Unsupported programming language",
+  "TPL-3001": "Invalid log format",
+  "TPL-3002": "Missing variable in log statement",
+  "TPL-3003": "Log validation failed",
+  "TPL-3004": "Failed to detect programming language",
+  "TPL-4001": "File system I/O error",
+  "TPL-4002": "Permission denied",
+  "TPL-4003": "Path traversal detected"
+}

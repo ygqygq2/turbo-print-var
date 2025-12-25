@@ -1,0 +1,10 @@
+out
+node_modules
+.vscode-test/
+*.vsix
+.DS_Store
+coverage
+.history
+
+# Turbo AI Rules - Auto-generated files
+.github/copilot-instructions.md
