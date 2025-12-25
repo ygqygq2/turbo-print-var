@@ -2,6 +2,7 @@
 
 [![Visual Studio Marketplace Version](https://img.shields.io/visual-studio-marketplace/v/ygqygq2.turbo-print-log.svg?color=07c160&label=turbo-print-log&logo=visual-studio-code)](https://marketplace.visualstudio.com/items?itemName=ygqygq2.turbo-print-log)
 ![Visual Studio Marketplace Installs](https://img.shields.io/visual-studio-marketplace/i/ygqygq2.turbo-print-log)
+![Open VSX Downloads](https://img.shields.io/open-vsx/dt/ygqygq2/turbo-print-log)
 
 [English](./README.md) | [中文](./README.zh.md)
 
@@ -65,7 +66,27 @@ console.log('🚀 ~ file: app.js:2 ~ user:', user);
 
 ### 🌐 Supported Languages
 
-JavaScript, TypeScript, Python, Java, C, C++, C#, Go, Rust, PHP, Ruby, Swift, Kotlin, Scala, Groovy, Dart, Lua, Perl, R, Shell Script, CoffeeScript
+- C
+- C++
+- C#
+- CoffeeScript
+- Dart
+- Go
+- Groovy
+- Java
+- JavaScript
+- Kotlin
+- Lua
+- Perl
+- PHP
+- Python
+- R
+- Ruby
+- Rust
+- Scala
+- Shell Script
+- Swift
+- TypeScript
 
 ### 📝 License
 
