@@ -16,7 +16,7 @@ export function printLogTester(testInfo: TestInfo) {
         const { fileName, cursorPosition } = fileInfo;
         const ext = path.extname(fileName);
         it(`should add print log for [${ext}] in file ${fileName}`, async () => {
-          const commandName = 'turbo-print-log.insertLog';
+          const commandName = 'turbo-print-var.insertLog';
           const resultFileName = fileName.replace(ext, `.result${ext}`);
           const { actual } = await executeCommandOnFile(
             commandName,

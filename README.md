@@ -4,9 +4,9 @@
   <img src="resources/images/logo.png" alt="Turbo Print Log" width="200">
 </p>
 
-[![Visual Studio Marketplace Version](https://img.shields.io/visual-studio-marketplace/v/ygqygq2.turbo-print-log.svg?color=07c160&label=turbo-print-log&logo=visual-studio-code)](https://marketplace.visualstudio.com/items?itemName=ygqygq2.turbo-print-log)
-[![Visual Studio Marketplace Installs](https://img.shields.io/visual-studio-marketplace/i/ygqygq2.turbo-print-log)](https://marketplace.visualstudio.com/items?itemName=ygqygq2.turbo-print-log)
-[![Open VSX Downloads](https://img.shields.io/open-vsx/dt/ygqygq2/turbo-print-log?label=open-vsx%20downloads)](https://open-vsx.org/extension/ygqygq2/turbo-print-log)
+[![Visual Studio Marketplace Version](https://img.shields.io/visual-studio-marketplace/v/ygqygq2.turbo-print-var.svg?color=07c160&label=turbo-print-var&logo=visual-studio-code)](https://marketplace.visualstudio.com/items?itemName=ygqygq2.turbo-print-var)
+[![Visual Studio Marketplace Installs](https://img.shields.io/visual-studio-marketplace/i/ygqygq2.turbo-print-var)](https://marketplace.visualstudio.com/items?itemName=ygqygq2.turbo-print-var)
+[![Open VSX Downloads](https://img.shields.io/open-vsx/dt/ygqygq2/turbo-print-var?label=open-vsx%20downloads)](https://open-vsx.org/extension/ygqygq2/turbo-print-var)
 
 [English](./README.md) | [中文](./README.zh.md)
 
@@ -58,15 +58,15 @@ console.log('🚀 ~ file: app.js:2 ~ user:', user);
 
 | Setting                                           | Description                       | Default |
 | ------------------------------------------------- | --------------------------------- | ------- |
-| `turbo-print-log.logMessagePrefix`                | Prefix for log messages           | `🚀`    |
-| `turbo-print-log.logMessageSuffix`                | Suffix after variable name        | `:`     |
-| `turbo-print-log.delimiterInsideMessage`          | Delimiter between elements        | `~`     |
-| `turbo-print-log.quote`                           | Quote style (`"`, `'`, `` ` ``)   | `"`     |
-| `turbo-print-log.includeFileNameAndLineNum`       | Include file name and line number | `true`  |
-| `turbo-print-log.addSemicolonInTheEnd`            | Add semicolon at end              | `false` |
-| `turbo-print-log.insertEmptyLineBeforeLogMessage` | Insert empty line before log      | `false` |
-| `turbo-print-log.insertEmptyLineAfterLogMessage`  | Insert empty line after log       | `false` |
-| `turbo-print-log.logFunction`                     | Custom log function per language  | `{}`    |
+| `turbo-print-var.logMessagePrefix`                | Prefix for log messages           | `🚀`    |
+| `turbo-print-var.logMessageSuffix`                | Suffix after variable name        | `:`     |
+| `turbo-print-var.delimiterInsideMessage`          | Delimiter between elements        | `~`     |
+| `turbo-print-var.quote`                           | Quote style (`"`, `'`, `` ` ``)   | `"`     |
+| `turbo-print-var.includeFileNameAndLineNum`       | Include file name and line number | `true`  |
+| `turbo-print-var.addSemicolonInTheEnd`            | Add semicolon at end              | `false` |
+| `turbo-print-var.insertEmptyLineBeforeLogMessage` | Insert empty line before log      | `false` |
+| `turbo-print-var.insertEmptyLineAfterLogMessage`  | Insert empty line after log       | `false` |
+| `turbo-print-var.logFunction`                     | Custom log function per language  | `{}`    |
 
 ### 🌐 Supported Languages
 

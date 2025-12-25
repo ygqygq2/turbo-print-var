@@ -16,9 +16,9 @@
 
 ## 快速链接
 
-- [GitHub 仓库](https://github.com/ygqygq2/turbo-print-log)
-- [VS Code 扩展商店](https://marketplace.visualstudio.com/items?itemName=ygqygq2.turbo-print-log)
-- [问题反馈](https://github.com/ygqygq2/turbo-print-log/issues)
+- [GitHub 仓库](https://github.com/ygqygq2/turbo-print-var)
+- [VS Code 扩展商店](https://marketplace.visualstudio.com/items?itemName=ygqygq2.turbo-print-var)
+- [问题反馈](https://github.com/ygqygq2/turbo-print-var/issues)
 
 ## 快速开始
 
@@ -33,7 +33,7 @@
 如果遇到问题或有疑问：
 
 1. 查阅相关文档
-2. 搜索 [已有问题](https://github.com/ygqygq2/turbo-print-log/issues)
+2. 搜索 [已有问题](https://github.com/ygqygq2/turbo-print-var/issues)
 3. 创建新问题并提供详细信息
 
 ---

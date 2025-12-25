@@ -1,11 +1,58 @@
+# Development and IDE
 .vscode/**
 .vscode-test/**
-src
-.gitignore
-.yarnrc
-vsc-extension-quickstart.md
-**/tsconfig.json
-**/.eslintrc.json
-**/*.map
+.github/**
+
+# Source files (compiled to out/)
+src/**
 **/*.ts
-node_modules
+!out/**/*.d.ts
+**/*.map
+
+# Configuration files
+**/tsconfig.json
+**/tsconfig.*.json
+eslint.config.mjs
+vite.config.ts
+.vscode-test.mjs
+.vscode-test-debug.mjs
+.mocharc.jsonc
+.prettierrc.json
+.prettierignore
+.editorconfig
+.lintstagedrc
+.simple-git-hooks.json
+.cspell.json
+.deepsource.toml
+**/.eslintrc.json
+
+# Git
+.git/**
+.gitignore
+.gitattributes
+
+# Dependencies and locks
+node_modules/**
+pnpm-lock.yaml
+.yarnrc
+
+# Documentation and examples
+vsc-extension-quickstart.md
+docs/**
+sampleWorkspace/**
+__mocks__/**
+
+# Test files
+test/**
+**/*.test.ts
+**/*.spec.ts
+**/*.test.js
+**/*.spec.js
+
+# Build artifacts and temporary files
+**/*.bak
+**/*.tmp
+**/*.log
+**/*.vsix
+.DS_Store
+Thumbs.db

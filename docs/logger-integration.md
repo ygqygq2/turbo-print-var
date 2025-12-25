@@ -20,9 +20,9 @@
 ### 3. 创建常量文件
 
 - 创建了 `src/utils/constants.ts`，包含：
-  - `EXTENSION_ID`: 'turbo-print-log'
+  - `EXTENSION_ID`: 'turbo-print-var'
   - `EXTENSION_NAME`: 'Turbo Print Log'
-  - `CONFIG_PREFIX`: 'turbo-print-log'
+  - `CONFIG_PREFIX`: 'turbo-print-var'
 
 ### 4. 更新日志器实现
 

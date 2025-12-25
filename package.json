@@ -1,5 +1,5 @@
 {
-  "name": "turbo-print-log",
+  "name": "turbo-print-var",
   "displayName": "Turbo Print Log - Multi-Language Debug Helper",
   "description": "Intelligent multi-language debug log insertion tool supporting 20+ programming languages",
   "version": "4.0.0",
@@ -26,46 +26,46 @@
       "type": "object",
       "title": "Turbo Print Log Configuration",
       "properties": {
-        "turbo-print-log.wrapLogMessage": {
+        "turbo-print-var.wrapLogMessage": {
           "type": "boolean",
           "default": false,
           "description": "Determine if the log message should be wrapped or not."
         },
-        "turbo-print-log.prefix": {
+        "turbo-print-var.prefix": {
           "type": "string",
           "default": "🚀",
           "description": "Log message prefix symbol."
         },
-        "turbo-print-log.suffix": {
+        "turbo-print-var.suffix": {
           "type": "string",
           "default": ":",
           "description": "Variable name suffix."
         },
-        "turbo-print-log.includeFileInfo": {
+        "turbo-print-var.includeFileInfo": {
           "type": "boolean",
           "default": true,
           "description": "Include file name and line number."
         },
-        "turbo-print-log.addSemicolon": {
+        "turbo-print-var.addSemicolon": {
           "type": "boolean",
           "description": "Add semicolon at the end. If not set, uses language default."
         },
-        "turbo-print-log.emptyLineBefore": {
+        "turbo-print-var.emptyLineBefore": {
           "type": "boolean",
           "default": false,
           "description": "Insert empty line before log."
         },
-        "turbo-print-log.emptyLineAfter": {
+        "turbo-print-var.emptyLineAfter": {
           "type": "boolean",
           "default": false,
           "description": "Insert empty line after log."
         },
-        "turbo-print-log.separator": {
+        "turbo-print-var.separator": {
           "type": "string",
           "default": "~",
           "description": "Separator between log elements."
         },
-        "turbo-print-log.quote": {
+        "turbo-print-var.quote": {
           "type": "string",
           "enum": [
             "\"",
@@ -75,7 +75,7 @@
           "default": "\"",
           "description": "Quote style: double, single or backtick."
         },
-        "turbo-print-log.logFunction": {
+        "turbo-print-var.logFunction": {
           "type": "object",
           "default": {
             "php": "echo"
@@ -86,53 +86,53 @@
     },
     "commands": [
       {
-        "command": "turbo-print-log.insertLog",
+        "command": "turbo-print-var.insertLog",
         "title": "Turbo Print Log: Insert Log"
       },
       {
-        "command": "turbo-print-log.updateLineNumbers",
+        "command": "turbo-print-var.updateLineNumbers",
         "title": "Turbo Print Log: Update Line Numbers"
       },
       {
-        "command": "turbo-print-log.commentLogs",
+        "command": "turbo-print-var.commentLogs",
         "title": "Turbo Print Log: Comment Logs"
       },
       {
-        "command": "turbo-print-log.uncommentLogs",
+        "command": "turbo-print-var.uncommentLogs",
         "title": "Turbo Print Log: Uncomment Logs"
       },
       {
-        "command": "turbo-print-log.deleteLogs",
+        "command": "turbo-print-var.deleteLogs",
         "title": "Turbo Print Log: Delete Logs"
       }
     ],
     "keybindings": [
       {
-        "command": "turbo-print-log.insertLog",
+        "command": "turbo-print-var.insertLog",
         "key": "ctrl+alt+l",
         "mac": "ctrl+alt+l",
         "when": "editorTextFocus"
       },
       {
-        "command": "turbo-print-log.updateLineNumbers",
+        "command": "turbo-print-var.updateLineNumbers",
         "key": "ctrl+alt+u",
         "mac": "ctrl+alt+u",
         "when": "editorTextFocus"
       },
       {
-        "command": "turbo-print-log.commentLogs",
+        "command": "turbo-print-var.commentLogs",
         "key": "alt+shift+c",
         "mac": "alt+shift+c",
         "when": "editorTextFocus"
       },
       {
-        "command": "turbo-print-log.uncommentLogs",
+        "command": "turbo-print-var.uncommentLogs",
         "key": "alt+shift+u",
         "mac": "alt+shift+u",
         "when": "editorTextFocus"
       },
       {
-        "command": "turbo-print-log.deleteLogs",
+        "command": "turbo-print-var.deleteLogs",
         "key": "alt+shift+d",
         "mac": "alt+shift+d",
         "when": "editorTextFocus"
@@ -207,15 +207,15 @@
   },
   "license": "SEE LICENSE IN LICENSE.txt",
   "bugs": {
-    "url": "https://github.com/ygqygq2/turbo-print-log/issues",
+    "url": "https://github.com/ygqygq2/turbo-print-var/issues",
     "email": "ygqygq2@qq.com"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ygqygq2/turbo-print-log.git"
+    "url": "https://github.com/ygqygq2/turbo-print-var.git"
   },
   "__metadata": {
-    "id": "ygqygq2.turbo-print-log",
+    "id": "ygqygq2.turbo-print-var",
     "publisherDisplayName": "ygqygq2",
     "publisherId": "e0b1421e-635c-639a-85a0-8b271dcb3d11",
     "isPreReleaseVersion": false

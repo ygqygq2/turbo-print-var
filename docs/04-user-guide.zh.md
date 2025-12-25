@@ -55,7 +55,7 @@ const city = 'NYC';
 
 ```json
 {
-  "turbo-print-log.logFn": {
+  "turbo-print-var.logFn": {
     "javascript": "logger.debug",
     "python": "logging.info",
     "java": "logger.info"
@@ -69,9 +69,9 @@ const city = 'NYC';
 
 ```json
 {
-  "turbo-print-log.prefix": "🔍",
-  "turbo-print-log.separator": " | ",
-  "turbo-print-log.quote": "'"
+  "turbo-print-var.prefix": "🔍",
+  "turbo-print-var.separator": " | ",
+  "turbo-print-var.quote": "'"
 }
 ```
 
@@ -157,7 +157,7 @@ A: 可以！在不同变量上放置多个光标，然后按 `Ctrl+Alt+L` 即可
 
 **Q: 如何修改日志格式？**
 
-A: 打开 VS Code 设置（`Ctrl+,`）并搜索 "turbo-print-log"。您可以自定义：
+A: 打开 VS Code 设置（`Ctrl+,`）并搜索 "turbo-print-var"。您可以自定义：
 
 - 前缀符号
 - 分隔符
@@ -172,7 +172,7 @@ A: 检查您的 settings.json：
 
 ```json
 {
-  "turbo-print-log.logFunction": {
+  "turbo-print-var.logFunction": {
     "javascript": "logger.debug",
     "python": "logging.info"
   }
@@ -183,15 +183,15 @@ A: 检查您的 settings.json：
 
 **Q: 如何禁用文件名和行号？**
 
-A: 在设置中设置 `"turbo-print-log.includeFileInfo": false`。
+A: 在设置中设置 `"turbo-print-var.includeFileInfo": false`。
 
 **Q: 可以修改 emoji 前缀吗？**
 
-A: 可以！将 `"turbo-print-log.prefix"` 改为任意文本或 emoji：
+A: 可以！将 `"turbo-print-var.prefix"` 改为任意文本或 emoji：
 
 ```json
 {
-  "turbo-print-log.prefix": "DEBUG"
+  "turbo-print-var.prefix": "DEBUG"
 }
 ```
 
@@ -214,7 +214,7 @@ A: 当前支持的语言列在语言支持章节中。如果不支持您的语�
 
 **Q: 可以使用模板字符串（反引号）作为引号吗？**
 
-A: 可以！在设置中设置 `"turbo-print-log.quote": "`"`。
+A: 可以！在设置中设置 `"turbo-print-var.quote": "`"`。
 
 ### 高级用法
 
@@ -233,11 +233,11 @@ class User {
 
 **Q: 可以自定义元素之间的分隔符吗？**
 
-A: 可以！将 `"turbo-print-log.separator"` 改为任意字符串：
+A: 可以！将 `"turbo-print-var.separator"` 改为任意字符串：
 
 ```json
 {
-  "turbo-print-log.separator": " | "
+  "turbo-print-var.separator": " | "
 }
 ```
 

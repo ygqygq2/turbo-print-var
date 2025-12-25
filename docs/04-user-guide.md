@@ -55,7 +55,7 @@ Configure per-language log functions in VS Code settings:
 
 ```json
 {
-  "turbo-print-log.logFn": {
+  "turbo-print-var.logFn": {
     "javascript": "logger.debug",
     "python": "logging.info",
     "java": "logger.info"
@@ -69,9 +69,9 @@ Customize log appearance:
 
 ```json
 {
-  "turbo-print-log.prefix": "🔍",
-  "turbo-print-log.separator": " | ",
-  "turbo-print-log.quote": "'"
+  "turbo-print-var.prefix": "🔍",
+  "turbo-print-var.separator": " | ",
+  "turbo-print-var.quote": "'"
 }
 ```
 
@@ -157,7 +157,7 @@ A: Yes! Place multiple cursors on different variables and press `Ctrl+Alt+L` to 
 
 **Q: How do I change the log format?**
 
-A: Go to VS Code Settings (`Ctrl+,`) and search for "turbo-print-log". You can customize:
+A: Go to VS Code Settings (`Ctrl+,`) and search for "turbo-print-var". You can customize:
 
 - Prefix symbol
 - Separator character
@@ -172,7 +172,7 @@ A: Check your settings.json:
 
 ```json
 {
-  "turbo-print-log.logFunction": {
+  "turbo-print-var.logFunction": {
     "javascript": "logger.debug",
     "python": "logging.info"
   }
@@ -183,15 +183,15 @@ Make sure the language ID matches VS Code's language identifier.
 
 **Q: How do I disable file name and line number?**
 
-A: Set `"turbo-print-log.includeFileInfo": false` in your settings.
+A: Set `"turbo-print-var.includeFileInfo": false` in your settings.
 
 **Q: Can I change the emoji prefix?**
 
-A: Yes! Change `"turbo-print-log.prefix"` to any text or emoji you like:
+A: Yes! Change `"turbo-print-var.prefix"` to any text or emoji you like:
 
 ```json
 {
-  "turbo-print-log.prefix": "DEBUG"
+  "turbo-print-var.prefix": "DEBUG"
 }
 ```
 
@@ -214,7 +214,7 @@ A: Currently supported languages are listed in the Language Support section. If 
 
 **Q: Can I use template literals (backticks) for quotes?**
 
-A: Yes! Set `"turbo-print-log.quote": "`"` in your settings.
+A: Yes! Set `"turbo-print-var.quote": "`"` in your settings.
 
 ### Advanced Usage
 
@@ -233,11 +233,11 @@ class User {
 
 **Q: Can I customize the separator between elements?**
 
-A: Yes! Change `"turbo-print-log.separator"` to any string:
+A: Yes! Change `"turbo-print-var.separator"` to any string:
 
 ```json
 {
-  "turbo-print-log.separator": " | "
+  "turbo-print-var.separator": " | "
 }
 ```
 

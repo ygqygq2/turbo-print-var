@@ -4,9 +4,9 @@
   <img src="resources/images/logo.png" alt="Turbo Print Log" width="200">
 </p>
 
-[![Visual Studio Marketplace Version](https://img.shields.io/visual-studio-marketplace/v/ygqygq2.turbo-print-log.svg?color=07c160&label=turbo-print-log&logo=visual-studio-code)](https://marketplace.visualstudio.com/items?itemName=ygqygq2.turbo-print-log)
-[![Visual Studio Marketplace Installs](https://img.shields.io/visual-studio-marketplace/i/ygqygq2.turbo-print-log)](https://marketplace.visualstudio.com/items?itemName=ygqygq2.turbo-print-log)
-[![Open VSX Downloads](https://img.shields.io/open-vsx/dt/ygqygq2/turbo-print-log?label=open-vsx%20downloads)](https://open-vsx.org/extension/ygqygq2/turbo-print-log)
+[![Visual Studio Marketplace Version](https://img.shields.io/visual-studio-marketplace/v/ygqygq2.turbo-print-var.svg?color=07c160&label=turbo-print-var&logo=visual-studio-code)](https://marketplace.visualstudio.com/items?itemName=ygqygq2.turbo-print-var)
+[![Visual Studio Marketplace Installs](https://img.shields.io/visual-studio-marketplace/i/ygqygq2.turbo-print-var)](https://marketplace.visualstudio.com/items?itemName=ygqygq2.turbo-print-var)
+[![Open VSX Downloads](https://img.shields.io/open-vsx/dt/ygqygq2/turbo-print-var?label=open-vsx%20downloads)](https://open-vsx.org/extension/ygqygq2/turbo-print-var)
 
 [English](./README.md) | [中文](./README.zh.md)
 
@@ -58,15 +58,15 @@ console.log('🚀 ~ file: app.js:2 ~ user:', user);
 
 | 设置                                              | 说明                          | 默认值  |
 | ------------------------------------------------- | ----------------------------- | ------- |
-| `turbo-print-log.logMessagePrefix`                | 日志消息前缀                  | `🚀`    |
-| `turbo-print-log.logMessageSuffix`                | 变量名后的后缀                | `:`     |
-| `turbo-print-log.delimiterInsideMessage`          | 元素之间的分隔符              | `~`     |
-| `turbo-print-log.quote`                           | 引号样式（`"`、`'`、`` ` ``） | `"`     |
-| `turbo-print-log.includeFileNameAndLineNum`       | 包含文件名和行号              | `true`  |
-| `turbo-print-log.addSemicolonInTheEnd`            | 末尾添加分号                  | `false` |
-| `turbo-print-log.insertEmptyLineBeforeLogMessage` | 日志前插入空行                | `false` |
-| `turbo-print-log.insertEmptyLineAfterLogMessage`  | 日志后插入空行                | `false` |
-| `turbo-print-log.logFunction`                     | 每种语言的自定义日志函数      | `{}`    |
+| `turbo-print-var.logMessagePrefix`                | 日志消息前缀                  | `🚀`    |
+| `turbo-print-var.logMessageSuffix`                | 变量名后的后缀                | `:`     |
+| `turbo-print-var.delimiterInsideMessage`          | 元素之间的分隔符              | `~`     |
+| `turbo-print-var.quote`                           | 引号样式（`"`、`'`、`` ` ``） | `"`     |
+| `turbo-print-var.includeFileNameAndLineNum`       | 包含文件名和行号              | `true`  |
+| `turbo-print-var.addSemicolonInTheEnd`            | 末尾添加分号                  | `false` |
+| `turbo-print-var.insertEmptyLineBeforeLogMessage` | 日志前插入空行                | `false` |
+| `turbo-print-var.insertEmptyLineAfterLogMessage`  | 日志后插入空行                | `false` |
+| `turbo-print-var.logFunction`                     | 每种语言的自定义日志函数      | `{}`    |
 
 ### 🌐 支持的语言
 

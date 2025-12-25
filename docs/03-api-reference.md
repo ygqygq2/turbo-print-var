@@ -178,13 +178,13 @@ console.log(jsConfig?.defaultLogFn); // "console.log"
 
 ## 命令 ID
 
-所有命令都以 `turbo-print-log.` 为前缀：
+所有命令都以 `turbo-print-var.` 为前缀：
 
-- `turbo-print-log.insertLog`
-- `turbo-print-log.updateLineNumbers`
-- `turbo-print-log.commentLogs`
-- `turbo-print-log.uncommentLogs`
-- `turbo-print-log.deleteLogs`
+- `turbo-print-var.insertLog`
+- `turbo-print-var.updateLineNumbers`
+- `turbo-print-var.commentLogs`
+- `turbo-print-var.uncommentLogs`
+- `turbo-print-var.deleteLogs`
 
 ## 事件
 

@@ -10,12 +10,12 @@ export const CHANNEL_TITLE = 'Turbo Print Log';
 /**
  * 配置命名空间（用于读取VS Code配置）
  */
-export const CONFIG_NAMESPACE = 'turbo-print-log';
+export const CONFIG_NAMESPACE = 'turbo-print-var';
 
 /**
  * 命令ID前缀
  */
-export const COMMAND_PREFIX = 'turbo-print-log';
+export const COMMAND_PREFIX = 'turbo-print-var';
 
 /**
  * 命令ID

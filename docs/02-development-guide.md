@@ -65,9 +65,9 @@ registerLanguage({
 
 ```json
 {
-  "turbo-print-log.prefix": "🔍",
-  "turbo-print-log.separator": " | ",
-  "turbo-print-log.logFn": {
+  "turbo-print-var.prefix": "🔍",
+  "turbo-print-var.separator": " | ",
+  "turbo-print-var.logFn": {
     "javascript": "logger.debug",
     "python": "logging.info"
   }
@@ -111,7 +111,7 @@ pnpm run compile
 pnpm run package
 ```
 
-输出：`turbo-print-log-{version}.vsix`
+输出：`turbo-print-var-{version}.vsix`
 
 ## 调试
 

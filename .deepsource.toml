@@ -22,7 +22,7 @@ name = "python"
 name = "go"
 
   [analyzers.meta]
-  import_root = "github.com/ygqygq2/turbo-print-log"
+  import_root = "github.com/ygqygq2/turbo-print-var"
 
 [[analyzers]]
 name = "java"
