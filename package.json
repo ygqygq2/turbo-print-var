@@ -1,7 +1,7 @@
 {
   "name": "turbo-print-log",
   "displayName": "Turbo Print Log - Multi-Language Debug Helper",
-  "description": "智能多语言调试日志插入工具 - 支持22+编程语言的变量打印",
+  "description": "Intelligent multi-language debug log insertion tool supporting 20+ programming languages",
   "version": "4.0.0",
   "publisher": "ygqygq2",
   "engines": {
@@ -211,7 +211,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:ygqygq2/turbo-print-log.git"
+    "url": "https://github.com/ygqygq2/turbo-print-log.git"
   },
   "__metadata": {
     "id": "ygqygq2.turbo-print-log",

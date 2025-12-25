@@ -10,7 +10,7 @@
 
 ### 🚀 Main Features
 
-**Turbo Print Log** is a powerful VS Code extension that automates debug log insertion for **22+ programming languages**. It intelligently generates context-aware log statements with file names, line numbers, and variable information.
+**Turbo Print Log** is a powerful VS Code extension that automates debug log insertion for **20+ programming languages**. It intelligently generates context-aware log statements with file names, line numbers, and variable information.
 
 ### ✨ Key Highlights
 

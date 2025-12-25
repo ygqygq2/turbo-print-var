@@ -2,7 +2,7 @@
 
 ## 概述
 
-Turbo Print Log 是一个采用模块化架构的 VS Code 扩展，为 22+ 种编程语言提供智能日志语句插入功能。
+Turbo Print Log 是一个采用模块化架构的 VS Code 扩展，为 20+ 种编程语言提供智能日志语句插入功能。
 
 ## 核心模块
 
@@ -23,7 +23,7 @@ Turbo Print Log 是一个采用模块化架构的 VS Code 扩展，为 22+ 种�
 
 #### 语言支持 (`languages/`)
 
-定义 22+ 种语言配置，包含：
+定义 20+ 种语言配置，包含：
 
 - `defaultLogFn`: 默认日志函数
 - `commentSyntax`: 单行/多行注释语法

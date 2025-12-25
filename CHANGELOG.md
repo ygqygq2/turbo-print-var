@@ -1,16 +1,19 @@
-**Change Log**
+**更新日志**
 
-All notable changes to the "turbo-print-log" extension will be documented in this file.
+此文件记录 "turbo-print-log" 扩展的所有重要更改。
 
 # [4.0.0]
 
-### ✨ Features
+## ✨ 新功能
 
-- 🌍 Support for 22+ programming languages (JavaScript, TypeScript, Python, Java, C/C++, Go, Rust, PHP, Ruby, Swift, Kotlin, Scala, Groovy, Dart, Lua, Perl, R, Shell Script, CoffeeScript, C#)
-- 🎯 Smart variable detection at cursor position or selection
-- 📍 Context-aware log output with file name and line number
-- ⚡ Multi-cursor support for processing multiple variables simultaneously
-- 🎨 Customizable log format (prefix, delimiter, quotes, etc.)
-- 🔧 Powerful commands: insert, update line numbers, comment, uncomment, and delete logs
-- 🏗️ Modular architecture with TypeScript strict mode
-- 🛡️ Intelligent log recognition using pattern matching (function + prefix + separator)
+- 🌍 支持 20+ 种编程语言：
+  - C, C++, C#, CoffeeScript, D, C++, C#, CoffeeScript,
+  - JavaScript, TypeScript, JSX, TSX, Kotlin, Lua, Perl, PHP
+  - Python, R, Ruby, Rust, Scala, Shell Script, Swift
+- 🎯 智能变量检测，支持光标位置或选中内容
+- 📍 上下文感知的日志输出，包含文件名和行号
+- ⚡ 多光标支持，可同时处理多个变量
+- 🎨 可自定义日志格式（前缀、分隔符、引号等）
+- 🔧 强大的命令：插入、更新行号、注释、取消注释、删除日志
+- 🏗️ 模块化架构，使用 TypeScript 严格模式
+- 🛡️ 智能日志识别，使用模式匹配（函数 + 前缀 + 分隔符）
