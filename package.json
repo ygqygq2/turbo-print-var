@@ -4,6 +4,9 @@
   "description": "Intelligent multi-language debug log insertion tool supporting 20+ programming languages",
   "version": "4.0.0",
   "publisher": "ygqygq2",
+  "sponsor": {
+    "url": "https://github.com/sponsors/ygqygq2"
+  },
   "engines": {
     "vscode": "^1.88.0"
   },

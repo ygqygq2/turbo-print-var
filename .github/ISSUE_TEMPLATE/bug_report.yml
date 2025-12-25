@@ -1,0 +1,66 @@
+name: 🐛 Bug Report
+description: Report a bug or issue
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting this issue! Please fill out the information below.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: A clear description of the bug
+      placeholder: What happened?
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      description: Steps to reproduce the behavior
+      placeholder: |
+        1. Open file '...'
+        2. Select variable '...'
+        3. Press 'Ctrl+Alt+L'
+        4. See error
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: What you expected to happen
+    validations:
+      required: true
+
+  - type: input
+    id: language
+    attributes:
+      label: Programming Language
+      description: Which language were you using?
+      placeholder: e.g., JavaScript, Python, Java
+    validations:
+      required: false
+
+  - type: input
+    id: version
+    attributes:
+      label: Extension Version
+      description: What version of Turbo Print Log?
+      placeholder: e.g., 4.0.0
+    validations:
+      required: false
+
+  - type: input
+    id: vscode-version
+    attributes:
+      label: VS Code Version
+      description: What version of VS Code?
+      placeholder: e.g., 1.88.0
+    validations:
+      required: false
