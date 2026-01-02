@@ -24,7 +24,6 @@ export class DocumentAnalyzer {
     return {
       fileName,
       lineNumber: lineNumber + 1, // VS Code 行号从0开始，显示时+1
-      // TODO: 未来可以添加类名和函数名的提取
     };
   }
 

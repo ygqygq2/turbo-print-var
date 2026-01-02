@@ -1,7 +1,7 @@
 {
   "name": "turbo-print-var",
-  "displayName": "Turbo Print Var - Multi-Language Debug Helper",
-  "description": "Intelligent multi-language debug log insertion tool supporting 20+ programming languages",
+  "displayName": "快速打印变量，多语言调试助手",
+  "description": "多语言打印变量 支持20+编程语言",
   "version": "4.0.3",
   "publisher": "ygqygq2",
   "sponsor": {
@@ -17,8 +17,23 @@
     "Other"
   ],
   "keywords": [
+    "debug",
     "debuggers",
-    "testing"
+    "testing",
+    "console.log",
+    "print",
+    "log",
+    "打印",
+    "调试",
+    "日志",
+    "多语言",
+    "typescript",
+    "javascript",
+    "python",
+    "java",
+    "golang",
+    "rust",
+    "php"
   ],
   "activationEvents": [
     "onLanguage"
@@ -115,7 +130,7 @@
       },
       {
         "command": "turbo-print-var.refreshTree",
-        "title": "Turbo Print Log: Refresh Statistics",
+        "title": "Turbo Print Var: Refresh Statistics",
         "icon": "$(refresh)"
       }
     ],

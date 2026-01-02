@@ -1,12 +1,29 @@
-# Turbo Print Var
+# Turbo Print Var (快速打印变量)
 
 <p align="center">
   <img src="resources/images/logo.png" alt="Turbo Print Var" width="200">
 </p>
 
+> **⚠️ 重要说明**
+>
+> 本扩展原名为 `turbo-print-log`，因 **VS Code Marketplace 无理下架** 而更名重新上架。
+>
+> **关于下架原因的声明**：
+>
+> - 本扩展的初衷是帮助开发者更高效地调试代码，完全免费开源，且为 MIT 许可证
+> - 原扩展多年仅支持 1-2 种语言，后来还增加了收费功能，而本扩展支持 20+ 种语言且完全免费
+> - **本扩展与原扩展没有任何关系**，是完全独立的开源项目
+> - 原扩展被无理要求不得使用 "turbo" 词汇，理由荒谬至极
+> - "Turbo" 是通用技术术语（涡轮增压、加速之意），在编程领域广泛使用（如 Turbo Pascal、TurboRepo、Vite Turbo 等）
+> - 本扩展名称完全合理，不存在任何商标侵权或误导性
+> - 我们强烈反对这种滥用审核权力、打压开源项目的行为
+>
+> 本项目完全开源，代码透明，欢迎审查和贡献：https://github.com/ygqygq2/turbo-print-var
+
 [![Visual Studio Marketplace Version](https://img.shields.io/visual-studio-marketplace/v/ygqygq2.turbo-print-var.svg?color=07c160&label=turbo-print-var&logo=visual-studio-code)](https://marketplace.visualstudio.com/items?itemName=ygqygq2.turbo-print-var)
 [![VS Code 安装量](https://img.shields.io/visual-studio-marketplace/i/ygqygq2.turbo-print-var?label=VS%20Code%20安装量)](https://marketplace.visualstudio.com/items?itemName=ygqygq2.turbo-print-var)
 [![Open VSX Downloads](https://img.shields.io/open-vsx/dt/ygqygq2/turbo-print-var?label=open-vsx%20downloads)](https://open-vsx.org/extension/ygqygq2/turbo-print-var)
+[![GitHub Release](https://img.shields.io/github/v/release/ygqygq2/turbo-print-var?label=GitHub%20Release)](https://github.com/ygqygq2/turbo-print-var/releases)
 
 [English](./README.md) | [中文](./README.zh.md)
 
@@ -60,21 +77,22 @@ console.log('🚀 ~ file: app.js:2 ~ user:', user);
 
 在 VS Code 设置中自定义扩展（`Ctrl+,` 或 `Cmd+,`）：
 
-| 设置                               | 说明                                         | 默认值   |
-| ---------------------------------- | -------------------------------------------- | -------- |
-| `turbo-print-var.prefix`           | 日志消息的前缀符号                           | `🚀`     |
-| `turbo-print-var.suffix`           | 变量名后的后缀                               | `:`      |
-| `turbo-print-var.separator`        | 日志元素间的分隔符                           | `~`      |
-| `turbo-print-var.quote`            | 引号样式：`"`、`'` 或 `` ` ``                | `"`      |
-| `turbo-print-var.includeFileInfo`  | 包含文件名和行号                             | `true`   |
-| `turbo-print-var.addSemicolon`     | 末尾添加分号（未设置时使用语言默认）         | 语言默认 |
-| `turbo-print-var.emptyLineBefore`  | 日志前插入空行                               | `false`  |
-| `turbo-print-var.emptyLineAfter`   | 日志后插入空行                               | `false`  |
-| `turbo-print-var.logFunction`      | 每种语言的自定义日志函数                     | `{}`     |
-| `turbo-print-var.enableCodeLens`   | 启用 CodeLens（日志上方操作按钮）            | `false`  |
-| `turbo-print-var.enableTreeView`   | 启用侧边栏统计面板                           | `false`  |
+| 设置                              | 说明                                 | 默认值   |
+| --------------------------------- | ------------------------------------ | -------- |
+| `turbo-print-var.prefix`          | 日志消息的前缀符号                   | `🚀`     |
+| `turbo-print-var.suffix`          | 变量名后的后缀                       | `:`      |
+| `turbo-print-var.separator`       | 日志元素间的分隔符                   | `~`      |
+| `turbo-print-var.quote`           | 引号样式：`"`、`'` 或 `` ` ``        | `"`      |
+| `turbo-print-var.includeFileInfo` | 包含文件名和行号                     | `true`   |
+| `turbo-print-var.addSemicolon`    | 末尾添加分号（未设置时使用语言默认） | 语言默认 |
+| `turbo-print-var.emptyLineBefore` | 日志前插入空行                       | `false`  |
+| `turbo-print-var.emptyLineAfter`  | 日志后插入空行                       | `false`  |
+| `turbo-print-var.logFunction`     | 每种语言的自定义日志函数             | `{}`     |
+| `turbo-print-var.enableCodeLens`  | 启用 CodeLens（日志上方操作按钮）    | `false`  |
+| `turbo-print-var.enableTreeView`  | 启用侧边栏统计面板                   | `false`  |
 
 **自定义日志函数示例：**
+
 ```json
 {
   "turbo-print-var.logFunction": {

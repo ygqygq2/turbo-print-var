@@ -14,6 +14,8 @@ describe('LogMessageBuilder', () => {
     separator: '~',
     includeFileInfo: true,
     logFunction: {},
+    enableCodeLens: false,
+    enableTreeView: false,
   };
 
   const jsConfig: LanguageConfig = {
