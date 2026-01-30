@@ -17,6 +17,7 @@ Turbo Print Var 是一个采用模块化架构的 VS Code 扩展，为 20+ 种�
 - `suffix`: 变量名后缀（默认：:）
 - `separator`: 日志元素分隔符（默认：~）
 - `logFunction`: 每种语言的自定义日志函数（对象类型）
+- `fileExtensionMapping`: 文件扩展名到语言ID的自定义映射（对象类型，最高优先级）
 - `quote`: 字符串引号样式（"、'、`）
 - `includeFileInfo`: 是否包含文件名和行号（默认：true）
 - `addSemicolon`: 是否添加分号（默认：undefined，使用语言默认）
@@ -25,7 +26,41 @@ Turbo Print Var 是一个采用模块化架构的 VS Code 扩展，为 20+ 种�
 - `enableCodeLens`: 启用 CodeLens 功能（默认：false）
 - `enableTreeView`: 启用 TreeView 统计面板（默认：false）
 
-### 2. 核心逻辑 (`src/core/`)
+### 2. 工具层 (`src/utils/`)
+
+#### 语言解析器 (`language-resolver.ts`)
+
+实现**三级优先级**的语言识别机制：
+
+1. **用户自定义配置** (`fileExtensionMapping`) - 最高优先级
+
+   - 允许用户自定义文件扩展名到语言ID的映射
+   - 示例：`{ ".vue": "vue", ".custom": "javascript" }`
+
+2. **VS Code 编辑器识别** (`document.languageId`) - 中等优先级
+
+   - 使用 VS Code 自动识别的语言ID
+   - 依赖已安装的语言扩展
+
+3. **扩展预设映射** (`DEFAULT_FILE_EXTENSION_MAPPING`) - 最低优先级
+   - 内置的常见框架语言映射
+   - 包括：Vue、Svelte、Astro、MDX 等
+
+这种设计确保了：
+
+- 用户可以完全控制语言识别行为
+- 充分利用 VS Code 生态系统的语言扩展
+- 提供开箱即用的常见框架支持
+
+#### 其他工具函数
+
+- **text.ts**: 文本处理辅助函数
+- **validation.ts**: 输入验证
+- **logger.ts**: 扩展日志记录
+- **utils.ts**: 通用工具函数（防抖、变量名处理等）
+- **vscode-utils.ts**: VS Code API 辅助函数
+
+### 3. 核心逻辑 (`src/core/`)
 
 #### 语言支持 (`languages/`)
 
@@ -87,6 +122,7 @@ Turbo Print Var 是一个采用模块化架构的 VS Code 扩展，为 20+ 种�
 - **Delete**: 删除日志
 
 特性：
+
 - 自动检测日志语句
 - 1 秒防抖刷新（文档编辑时）
 - 只在当前活动文档中显示
@@ -100,6 +136,7 @@ Turbo Print Var 是一个采用模块化架构的 VS Code 扩展，为 20+ 种�
 - **Workspace**: 工作区所有已打开文件的日志列表
 
 特性：
+
 - 10 秒防抖刷新（文档编辑时）
 - 只扫描已打开的文件
 - 限制显示最多 50 个文件

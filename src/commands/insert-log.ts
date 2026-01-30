@@ -1,12 +1,12 @@
 import * as vscode from 'vscode';
 
 import { ConfigManager } from '../config/settings';
-import { getLanguageConfig } from '../core/languages';
 import { LogMessageBuilder } from '../core/log-builder';
 import { DocumentAnalyzer } from '../editor/document';
 import { LogInserter } from '../editor/insertion';
 import { VariableSelector } from '../editor/selection';
 import { Logger } from '../utils/logger';
+import { LanguageResolver } from '../utils/language-resolver';
 
 /**
  * 插入日志命令
@@ -24,9 +24,10 @@ export async function insertLogCommand(): Promise<void> {
     const config = ConfigManager.getConfig();
 
     // 获取语言配置
-    const languageConfig = getLanguageConfig(editor.document.languageId);
+    const languageConfig = LanguageResolver.getDocumentLanguageConfig(editor.document);
     if (!languageConfig) {
-      vscode.window.showWarningMessage(`Language ${editor.document.languageId} is not supported`);
+      const languageId = LanguageResolver.resolveLanguageId(editor.document);
+      vscode.window.showWarningMessage(`Language ${languageId} is not supported`);
       return;
     }
 

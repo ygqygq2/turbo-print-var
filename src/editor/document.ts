@@ -1,9 +1,9 @@
 import path from 'path';
 import * as vscode from 'vscode';
 
-import { getLanguageConfig } from '../core/languages';
 import { LogParser } from '../core/log-parser';
 import { CodeContext, UserConfig } from '../types';
+import { LanguageResolver } from '../utils/language-resolver';
 
 /**
  * 文档分析器 - 分析文档，查找日志等
@@ -35,14 +35,15 @@ export class DocumentAnalyzer {
     config: UserConfig,
   ): Array<{ line: number; range: vscode.Range }> {
     const logs: Array<{ line: number; range: vscode.Range }> = [];
-    const languageConfig = getLanguageConfig(document.languageId);
+    const languageConfig = LanguageResolver.getDocumentLanguageConfig(document);
 
     if (!languageConfig) {
       return logs;
     }
 
     // 获取日志函数
-    const logFunction = config.logFunction[document.languageId] || languageConfig.defaultLogFn;
+    const languageId = LanguageResolver.resolveLanguageId(document);
+    const logFunction = config.logFunction[languageId] || languageConfig.defaultLogFn;
 
     // 遍历文档所有行
     for (let i = 0; i < document.lineCount; i++) {

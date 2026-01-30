@@ -38,6 +38,13 @@ describe('Languages', () => {
       expect(isLanguageSupported('go')).toBe(true);
     });
 
+    it('应该支持框架语言', () => {
+      expect(isLanguageSupported('vue')).toBe(true);
+      expect(isLanguageSupported('svelte')).toBe(true);
+      expect(isLanguageSupported('astro')).toBe(true);
+      expect(isLanguageSupported('mdx')).toBe(true);
+    });
+
     it('应该拒绝不支持的语言', () => {
       expect(isLanguageSupported('unknown')).toBe(false);
       expect(isLanguageSupported('')).toBe(false);
@@ -56,6 +63,10 @@ describe('Languages', () => {
       expect(languages).toContain('cpp');
       expect(languages).toContain('go');
       expect(languages).toContain('rust');
+      expect(languages).toContain('vue');
+      expect(languages).toContain('svelte');
+      expect(languages).toContain('astro');
+      expect(languages).toContain('mdx');
     });
   });
 

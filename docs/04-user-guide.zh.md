@@ -86,19 +86,41 @@ console.log('🔍 | file: app.js:10 | user:', user);
 
 ## 配置选项
 
-| 设置                 | 说明                   | 默认值  | 示例                 |
-| -------------------- | ---------------------- | ------- | -------------------- |
-| `prefix`             | 消息前缀               | `🚀`    | `🔍`, `DEBUG`, `>>>` |
-| `suffix`             | 变量名后缀             | `:`     | `=`, `->`            |
-| `separator`          | 元素分隔符             | `~`     | `\|`, `-`, `>>`      |
-| `quote`              | 引号样式               | `"`     | `'`, `` ` ``         |
-| `includeFileInfo`    | 显示文件名和行号       | `true`  | `false`              |
-| `addSemicolon`       | 添加分号               | 语言默认 | `true`, `false`      |
-| `emptyLineBefore`    | 日志前插入空行         | `false` | `true`               |
-| `emptyLineAfter`     | 日志后插入空行         | `false` | `true`               |
-| `logFunction`        | 自定义日志函数（对象） | `{}`    | 见下文               |
-| `enableCodeLens`     | 启用 CodeLens 功能     | `false` | `true`               |
-| `enableTreeView`     | 启用统计面板           | `false` | `true`               |
+| 设置                   | 说明                           | 默认值   | 示例                 |
+| ---------------------- | ------------------------------ | -------- | -------------------- |
+| `prefix`               | 消息前缀                       | `🚀`     | `🔍`, `DEBUG`, `>>>` |
+| `suffix`               | 变量名后缀                     | `:`      | `=`, `->`            |
+| `separator`            | 元素分隔符                     | `~`      | `\|`, `-`, `>>`      |
+| `quote`                | 引号样式                       | `"`      | `'`, `` ` ``         |
+| `includeFileInfo`      | 显示文件名和行号               | `true`   | `false`              |
+| `addSemicolon`         | 添加分号                       | 语言默认 | `true`, `false`      |
+| `emptyLineBefore`      | 日志前插入空行                 | `false`  | `true`               |
+| `emptyLineAfter`       | 日志后插入空行                 | `false`  | `true`               |
+| `logFunction`          | 自定义日志函数（对象）         | `{}`     | 见下文               |
+| `fileExtensionMapping` | 文件扩展名到语言ID映射（对象） | `{}`     | 见下文               |
+| `enableCodeLens`       | 启用 CodeLens 功能             | `false`  | `true`               |
+| `enableTreeView`       | 启用统计面板                   | `false`  | `true`               |
+
+### 自定义文件扩展名到语言映射
+
+对于 VS Code 无法自动识别的文件类型，或者想强制使用特定语言：
+
+```json
+{
+  "turbo-print-var.fileExtensionMapping": {
+    ".vue": "vue",
+    ".custom": "javascript"
+  }
+}
+```
+
+**语言识别优先级**（从高到低）：
+
+1. **用户自定义配置** (`fileExtensionMapping`) - 最高优先级
+2. **VS Code 编辑器识别** - 依赖已安装的语言扩展
+3. **扩展预设映射** - 内置常见框架支持（Vue、Svelte、Astro、MDX）
+
+这样您可以完全控制语言识别行为，同时充分利用 VS Code 的语言生态。
 
 ### CodeLens 功能
 
@@ -111,6 +133,7 @@ console.log('🔍 | file: app.js:10 | user:', user);
 ```
 
 功能：
+
 - **Update**: 更新行号
 - **Comment**: 注释/取消注释
 - **Delete**: 删除日志
@@ -126,6 +149,7 @@ console.log('🔍 | file: app.js:10 | user:', user);
 ```
 
 显示内容：
+
 - **Current File**: 当前文件的总数、活跃、已注释日志数
 - **Workspace**: 所有已打开文件的日志列表（最多 50 个）
 
@@ -133,28 +157,29 @@ console.log('🔍 | file: app.js:10 | user:', user);
 
 支持的语言及默认日志函数：
 
-| 语言                  | 默认函数             |
-| --------------------- | -------------------- |
-| JavaScript/TypeScript | `console.log`        |
-| Python                | `print`              |
-| Java                  | `System.out.println` |
-| C                     | `printf`             |
-| C++                   | `std::cout`          |
-| C#                    | `Console.WriteLine`  |
-| Go                    | `fmt.Println`        |
-| Rust                  | `println!`           |
-| PHP                   | `echo`               |
-| Ruby                  | `puts`               |
-| Swift                 | `print`              |
-| Kotlin                | `println`            |
-| Scala                 | `println`            |
-| Groovy                | `println`            |
-| Dart                  | `print`              |
-| Lua                   | `print`              |
-| Perl                  | `print`              |
-| R                     | `print`              |
-| Shell Script          | `echo`               |
-| CoffeeScript          | `console.log`        |
+| 语言                      | 默认函数             |
+| ------------------------- | -------------------- |
+| JavaScript/TypeScript/JSX | `console.log`        |
+| Vue/Svelte/Astro/MDX      | `console.log`        |
+| Python                    | `print`              |
+| Java                      | `System.out.println` |
+| C                         | `printf`             |
+| C++                       | `std::cout`          |
+| C#                        | `Console.WriteLine`  |
+| Go                        | `fmt.Println`        |
+| Rust                      | `println!`           |
+| PHP                       | `echo`               |
+| Ruby                      | `puts`               |
+| Swift                     | `print`              |
+| Kotlin                    | `println`            |
+| Scala                     | `println`            |
+| Groovy                    | `println`            |
+| Dart                      | `print`              |
+| Lua                       | `print`              |
+| Perl                      | `print`              |
+| R                         | `print`              |
+| Shell Script              | `echo`               |
+| CoffeeScript              | `console.log`        |
 
 ## 使用技巧
 

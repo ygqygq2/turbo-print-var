@@ -15,6 +15,7 @@ export interface UserConfig {
   separator: string;
   includeFileInfo: boolean;
   logFunction: Record<string, string>;
+  fileExtensionMapping: Record<string, string>;
   enableCodeLens: boolean;
   enableTreeView: boolean;
 }

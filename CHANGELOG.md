@@ -2,11 +2,23 @@
 
 此文件记录 "turbo-print-var" 扩展的所有重要更改。
 
+# [4.0.4]
+
+## ✨ 新功能
+
+- 🎨 支持现代前端框架：Vue、Svelte、Astro、MDX
+- ⚙️ 新增配置项 `fileExtensionMapping` 自定义文件扩展名映射
+
+## 🐛 修复
+
+- 修复 Vue 等框架文件无法识别的问题 ([#1](https://github.com/ygqygq2/turbo-print-var/issues/1))
+
 # [4.0.3]
 
 - 扩展说明改为中文，补充下架声明内容
 
 ## 🛠️ 改进
+
 - 删除多余代码
 
 # [4.0.2]

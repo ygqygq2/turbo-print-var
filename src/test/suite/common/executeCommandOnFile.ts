@@ -31,6 +31,7 @@ export async function executeCommandOnFile(
   fs.copyFileSync(srcAbsPath, testAbsPath);
   // 打开文件
   const doc = await vscode.workspace.openTextDocument(testAbsPath);
+
   await vscode.window.showTextDocument(doc);
   // 定位光标
   const editor = vscode.window.activeTextEditor;

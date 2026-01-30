@@ -1,10 +1,10 @@
 import * as vscode from 'vscode';
 
 import { ConfigManager } from '../config/settings';
-import { getLanguageConfig } from '../core/languages';
 import { LogParser } from '../core/log-parser';
 import { DocumentAnalyzer } from '../editor/document';
 import { Logger } from '../utils/logger';
+import { LanguageResolver } from '../utils/language-resolver';
 
 /**
  * 注释所有日志命令
@@ -19,10 +19,11 @@ export async function commentAllLogsCommand(): Promise<void> {
 
   try {
     const config = ConfigManager.getConfig();
-    const languageConfig = getLanguageConfig(editor.document.languageId);
+    const languageConfig = LanguageResolver.getDocumentLanguageConfig(editor.document);
 
     if (!languageConfig) {
-      vscode.window.showWarningMessage(`Language ${editor.document.languageId} is not supported`);
+      const languageId = LanguageResolver.resolveLanguageId(editor.document);
+      vscode.window.showWarningMessage(`Language ${languageId} is not supported`);
       return;
     }
 

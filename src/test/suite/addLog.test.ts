@@ -27,6 +27,10 @@ const testInfo: TestInfo = [
       { fileName: 'no-print-log.sh', cursorPosition: { line: 0, character: 0 } },
       { fileName: 'no-print-log.swift', cursorPosition: { line: 0, character: 4 } },
       { fileName: 'no-print-log.ts', cursorPosition: { line: 0, character: 6 } },
+      { fileName: 'no-print-log.vue', cursorPosition: { line: 0, character: 6 } },
+      { fileName: 'no-print-log.svelte', cursorPosition: { line: 0, character: 6 } },
+      { fileName: 'no-print-log.astro', cursorPosition: { line: 0, character: 6 } },
+      { fileName: 'no-print-log.mdx', cursorPosition: { line: 0, character: 6 } },
     ],
   },
 ];

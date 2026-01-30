@@ -1,9 +1,9 @@
 import * as vscode from 'vscode';
 
 import { ConfigManager } from '../config/settings';
-import { getLanguageConfig } from '../core/languages';
 import { LogParser } from '../core/log-parser';
 import { Logger } from '../utils/logger';
+import { LanguageResolver } from '../utils/language-resolver';
 
 /**
  * CodeLens Provider for log statements
@@ -34,8 +34,8 @@ export class LogCodeLensProvider implements vscode.CodeLensProvider {
   ): vscode.CodeLens[] | Thenable<vscode.CodeLens[]> {
     const codeLenses: vscode.CodeLens[] = [];
     const config = ConfigManager.getConfig();
-    const languageId = document.languageId;
-    const languageConfig = getLanguageConfig(languageId);
+    const languageId = LanguageResolver.resolveLanguageId(document);
+    const languageConfig = LanguageResolver.getDocumentLanguageConfig(document);
 
     if (!languageConfig) {
       return codeLenses;

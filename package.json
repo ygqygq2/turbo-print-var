@@ -2,7 +2,7 @@
   "name": "turbo-print-var",
   "displayName": "快速打印变量，多语言调试助手",
   "description": "多语言打印变量 支持20+编程语言",
-  "version": "4.0.3",
+  "version": "4.0.4",
   "publisher": "ygqygq2",
   "sponsor": {
     "url": "https://github.com/sponsors/ygqygq2"
@@ -94,6 +94,11 @@
             "php": "echo"
           },
           "description": "Custom log function per language."
+        },
+        "turbo-print-var.fileExtensionMapping": {
+          "type": "object",
+          "default": {},
+          "description": "Custom file extension to language ID mapping. Example: { '.vue': 'vue', '.svelte': 'svelte' }. This has the highest priority."
         },
         "turbo-print-var.enableCodeLens": {
           "type": "boolean",

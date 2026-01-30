@@ -83,43 +83,66 @@ console.log('🔍 | file: app.js:10 | user:', user);
 
 ## Configuration Options
 
-| Setting                           | Description           | Default | Example              |
-| --------------------------------- | --------------------- | ------- | -------------------- |
-| `prefix`                          | Message prefix        | `🚀`    | `🔍`, `DEBUG`, `>>>` |
-| `separator`                       | Element separator     | `~`     | `\|`, `-`, `>>`      |
-| `quote`                           | Quote style           | `"`     | `'`, `` ` ``         |
-| `logMessageSuffix`                | Suffix after variable | `:`     | `=`, `->`            |
-| `includeFileNameAndLineNum`       | Show file context     | `true`  | `false`              |
-| `addSemicolonInTheEnd`            | Add semicolon         | `false` | `true`               |
-| `insertEmptyLineBeforeLogMessage` | Blank line before     | `false` | `true`               |
-| `insertEmptyLineAfterLogMessage`  | Blank line after      | `false` | `true`               |
+| Setting                           | Description                           | Default | Example              |
+| --------------------------------- | ------------------------------------- | ------- | -------------------- |
+| `prefix`                          | Message prefix                        | `🚀`    | `🔍`, `DEBUG`, `>>>` |
+| `separator`                       | Element separator                     | `~`     | `\|`, `-`, `>>`      |
+| `quote`                           | Quote style                           | `"`     | `'`, `` ` ``         |
+| `logMessageSuffix`                | Suffix after variable                 | `:`     | `=`, `->`            |
+| `includeFileNameAndLineNum`       | Show file context                     | `true`  | `false`              |
+| `addSemicolonInTheEnd`            | Add semicolon                         | `false` | `true`               |
+| `insertEmptyLineBeforeLogMessage` | Blank line before                     | `false` | `true`               |
+| `insertEmptyLineAfterLogMessage`  | Blank line after                      | `false` | `true`               |
+| `fileExtensionMapping`            | File extension to language ID mapping | `{}`    | See below            |
+
+### Custom File Extension Mapping
+
+For file types that VS Code cannot auto-detect, or to force a specific language:
+
+```json
+{
+  "turbo-print-var.fileExtensionMapping": {
+    ".vue": "vue",
+    ".custom": "javascript"
+  }
+}
+```
+
+**Language Recognition Priority** (highest to lowest):
+
+1. **User Custom Configuration** (`fileExtensionMapping`) - Highest priority
+2. **VS Code Editor Detection** - Depends on installed language extensions
+3. **Extension Preset Mapping** - Built-in support for common frameworks (Vue, Svelte, Astro, MDX)
+
+This allows you to fully control language recognition while leveraging VS Code's language ecosystem.
 
 ## Language Support
 
 Supported languages with default log functions:
 
-| Language              | Default Function     |
-| --------------------- | -------------------- |
-| JavaScript/TypeScript | `console.log`        |
-| Python                | `print`              |
-| Java                  | `System.out.println` |
-| C                     | `printf`             |
-| C++                   | `std::cout`          |
-| C#                    | `Console.WriteLine`  |
-| Go                    | `fmt.Println`        |
-| Rust                  | `println!`           |
-| PHP                   | `echo`               |
-| Ruby                  | `puts`               |
-| Swift                 | `print`              |
-| Kotlin                | `println`            |
-| Scala                 | `println`            |
-| Groovy                | `println`            |
-| Dart                  | `print`              |
-| Lua                   | `print`              |
-| Perl                  | `print`              |
-| R                     | `print`              |
-| Shell Script          | `echo`               |
-| CoffeeScript          | `console.log`        |
+| Language                  | Default Function     |
+| ------------------------- | -------------------- |
+| JavaScript/TypeScript/JSX | `console.log`        |
+| Vue/Svelte/Astro/MDX      | `console.log`        |
+| Python                    | `print`              |
+| Java                      | `System.out.println` |
+| C                         | `printf`             |
+| C++                       | `std::cout`          |
+| C#                        | `Console.WriteLine`  |
+| Go                        | `fmt.Println`        |
+| Rust                      | `println!`           |
+| PHP                       | `echo`               |
+| Ruby                      | `puts`               |
+| Swift                     | `print`              |
+| Kotlin                    | `println`            |
+| Scala                     | `println`            |
+| Groovy                    | `println`            |
+| Dart                      | `print`              |
+| Lua                       | `print`              |
+| Perl                      | `print`              |
+| R                         | `print`              |
+| Shell Script              | `echo`               |
+| CoffeeScript              | `console.log`        |
 
 ## Tips & Tricks
 

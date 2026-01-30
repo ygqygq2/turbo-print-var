@@ -2,8 +2,8 @@ import * as path from 'path';
 import * as vscode from 'vscode';
 
 import { ConfigManager } from '../config/settings';
-import { getLanguageConfig } from '../core/languages';
 import { LogParser } from '../core/log-parser';
+import { LanguageResolver } from '../utils/language-resolver';
 
 /**
  * Tree item for log statistics
@@ -185,8 +185,8 @@ export class LogTreeProvider implements vscode.TreeDataProvider<LogTreeItem> {
     commented: number;
   } {
     const config = ConfigManager.getConfig();
-    const languageId = document.languageId;
-    const languageConfig = getLanguageConfig(languageId);
+    const languageId = LanguageResolver.resolveLanguageId(document);
+    const languageConfig = LanguageResolver.getDocumentLanguageConfig(document);
 
     if (!languageConfig) {
       return { total: 0, active: 0, commented: 0 };

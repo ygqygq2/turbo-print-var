@@ -268,3 +268,43 @@ registerLanguage({
   needsSemicolon: false,
   formatLog: (logFn, msg, variable, quote) => `${logFn} ${quote}${msg}${quote} + ${variable}`,
 });
+
+// Vue (单文件组件 - SFC)
+registerLanguage({
+  id: 'vue',
+  defaultLogFn: 'console.log',
+  commentSyntax: { line: '//' },
+  defaultStringQuote: '"',
+  needsSemicolon: true,
+  formatLog: (logFn, msg, variable, quote) => `${logFn}(${quote}${msg}${quote}, ${variable})`,
+});
+
+// Svelte (单文件组件)
+registerLanguage({
+  id: 'svelte',
+  defaultLogFn: 'console.log',
+  commentSyntax: { line: '//' },
+  defaultStringQuote: '"',
+  needsSemicolon: true,
+  formatLog: (logFn, msg, variable, quote) => `${logFn}(${quote}${msg}${quote}, ${variable})`,
+});
+
+// Astro (单文件组件)
+registerLanguage({
+  id: 'astro',
+  defaultLogFn: 'console.log',
+  commentSyntax: { line: '//' },
+  defaultStringQuote: '"',
+  needsSemicolon: true,
+  formatLog: (logFn, msg, variable, quote) => `${logFn}(${quote}${msg}${quote}, ${variable})`,
+});
+
+// MDX (Markdown + JSX)
+registerLanguage({
+  id: 'mdx',
+  defaultLogFn: 'console.log',
+  commentSyntax: { line: '//' },
+  defaultStringQuote: '"',
+  needsSemicolon: true,
+  formatLog: (logFn, msg, variable, quote) => `${logFn}(${quote}${msg}${quote}, ${variable})`,
+});
