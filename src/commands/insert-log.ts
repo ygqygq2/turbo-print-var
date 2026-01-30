@@ -5,8 +5,8 @@ import { LogMessageBuilder } from '../core/log-builder';
 import { DocumentAnalyzer } from '../editor/document';
 import { LogInserter } from '../editor/insertion';
 import { VariableSelector } from '../editor/selection';
-import { Logger } from '../utils/logger';
 import { LanguageResolver } from '../utils/language-resolver';
+import { Logger } from '../utils/logger';
 
 /**
  * 插入日志命令

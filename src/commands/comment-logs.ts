@@ -3,8 +3,8 @@ import * as vscode from 'vscode';
 import { ConfigManager } from '../config/settings';
 import { LogParser } from '../core/log-parser';
 import { DocumentAnalyzer } from '../editor/document';
-import { Logger } from '../utils/logger';
 import { LanguageResolver } from '../utils/language-resolver';
+import { Logger } from '../utils/logger';
 
 /**
  * 注释所有日志命令

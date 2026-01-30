@@ -1,8 +1,8 @@
-import * as vscode from 'vscode';
 import * as path from 'path';
+import * as vscode from 'vscode';
 
-import { ConfigManager } from '../config/settings';
 import { DEFAULT_FILE_EXTENSION_MAPPING } from '../config/defaults';
+import { ConfigManager } from '../config/settings';
 import { getLanguageConfig } from '../core/languages';
 
 /**

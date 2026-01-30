@@ -2,8 +2,8 @@ import * as vscode from 'vscode';
 
 import { ConfigManager } from '../config/settings';
 import { LogParser } from '../core/log-parser';
-import { Logger } from '../utils/logger';
 import { LanguageResolver } from '../utils/language-resolver';
+import { Logger } from '../utils/logger';
 
 /**
  * CodeLens Provider for log statements

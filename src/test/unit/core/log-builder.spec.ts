@@ -14,6 +14,7 @@ describe('LogMessageBuilder', () => {
     separator: '~',
     includeFileInfo: true,
     logFunction: {},
+    fileExtensionMapping: {},
     enableCodeLens: false,
     enableTreeView: false,
   };
